@@ -24,6 +24,50 @@ parentElement.appendChild( table );
 
 let totaly = [];
 
+//declaration object name seattle
+// const Seattle = {
+//   maxCustomers: 65,
+//   minCustomers: 23,
+//   AvgCookie: 6.3,
+//   cookies: [],
+//   totalx: 0,
+//   generateRandomNumber: function () {
+//     for (let i = 0; i < hours.length; i++) {
+//       this.cookies.push(Math.ceil(getRandomInt(this.minCustomers, this.maxCustomers) * this.AvgCookie));
+
+//     }
+//   },
+
+//   render: function () {
+
+//     const parentElement = document.getElementById('container');
+//     const articleElement = document.createElement('article');
+//     parentElement.appendChild(articleElement);
+
+//     const h2Element = document.createElement('h2');
+//     articleElement.appendChild(h2Element);
+//     h2Element.textContent = 'Seattle';
+
+//     const ulElement = document.createElement('ul');
+//     articleElement.appendChild(ulElement);
+
+//     for (let i = 0; i < hours.length; i++) {
+//       this.totalx = this.totalx + this.cookies[i];
+//       const liElement = document.createElement('li');
+//       ulElement.appendChild(liElement);
+//       liElement.textContent = hours[i] + ' ' + this.cookies[i];
+//     }
+//     let total = document.createElement('li');
+//     total.textContent = 'total ' + this.totalx + ' cookies';
+//     ulElement.appendChild(total);
+
+//   }
+// }
+// Seattle.generateRandomNumber();
+// Seattle.render();
+
+// new constructor
+
 function City( name, maxCustomers, minCustomers, AvgCookie ) {
   this.maxCustomers = maxCustomers;
   this.minCustomers = minCustomers;
@@ -53,6 +97,7 @@ City.prototype.generateRandomNumber = function () {
     tr.appendChild( trLoction );
     trLoction.textContent = 'Location';
 
+
     for ( let i = 0; i < hours.length; i++ ) {
 
       const thElement = document.createElement( 'th' );
@@ -64,7 +109,7 @@ City.prototype.generateRandomNumber = function () {
     trDaily.textContent = 'Daily Location Total';
   };
 
-
+  //
   City.prototype.rowS = function () {
     const tr = document.createElement( 'tr' );
     table.appendChild( tr );
@@ -83,6 +128,7 @@ City.prototype.generateRandomNumber = function () {
     tr.appendChild( tdTotal );
     tdTotal.textContent = this.totalx;
   };
+
 };
 
 City.prototype.footer = function () {
@@ -111,9 +157,6 @@ City.prototype.footer = function () {
   totalyrow.appendChild( finaltotalcell );
 };
 
-
-
-
 const Seattle = new City( 'Seattle', 65, 23, 6.3 );
 const Tokyo = new City( 'Tokyo', 24, 3, 1.2 );
 const Dubai = new City( 'Dubai', 38, 11, 3.7 );
@@ -134,12 +177,31 @@ Paris.rowS();
 Lima.rowS();
 Lima.footer();
 
-console.log( Seattle );
-console.log( Tokyo );
-console.log( Dubai );
-console.log( Paris );
-console.log( Lima );
 
+
+const formElement = document.getElementById( 'newBranch' );
+formElement.addEventListener( 'submit', function ( event ) {
+
+  event.preventDefault();
+
+  const cityName = event.target.cityName.value;
+  const maxCustomers = event.target.maxCustomers.value;
+  const minCustomers = event.target.minCustomers.value;
+  const avgCookie = event.target.avgCookie.value;
+
+  const newBranch = new City( cityName, maxCustomers, minCustomers, avgCookie );
+
+  table.deleteRow( table.rows.length -1 );
+  newBranch.generateRandomNumber();
+  newBranch.rowS();
+  newBranch.footer();
+
+
+} );
+
+
+
+// Helper Function
 function getRandomInt( min, max ) {
   min = Math.ceil( min );
   max = Math.floor( max );
