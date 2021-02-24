@@ -1,0 +1,22 @@
+
+
+
+
+body{
+  line-height: 1.5;
+  background-color: rgb(248, 244, 244);
+color: black;
+}
+
+table {
+  width: 70%;
+  
+
+}
+table, th, td {
+  border: 1px solid #d463a2;
+  text-align: center;
+}
+
+tr:nth-child(even) {background-color: #f5b0e0;}
+tr:nth-child(odd) {background-color: #d463a2;}
