@@ -24,49 +24,7 @@ parentElement.appendChild( table );
 
 let totaly = [];
 
-//declaration object name seattle
-// const Seattle = {
-//   maxCustomers: 65,
-//   minCustomers: 23,
-//   AvgCookie: 6.3,
-//   cookies: [],
-//   totalx: 0,
-//   generateRandomNumber: function () {
-//     for (let i = 0; i < hours.length; i++) {
-//       this.cookies.push(Math.ceil(getRandomInt(this.minCustomers, this.maxCustomers) * this.AvgCookie));
 
-//     }
-//   },
-
-//   render: function () {
-
-//     const parentElement = document.getElementById('container');
-//     const articleElement = document.createElement('article');
-//     parentElement.appendChild(articleElement);
-
-//     const h2Element = document.createElement('h2');
-//     articleElement.appendChild(h2Element);
-//     h2Element.textContent = 'Seattle';
-
-//     const ulElement = document.createElement('ul');
-//     articleElement.appendChild(ulElement);
-
-//     for (let i = 0; i < hours.length; i++) {
-//       this.totalx = this.totalx + this.cookies[i];
-//       const liElement = document.createElement('li');
-//       ulElement.appendChild(liElement);
-//       liElement.textContent = hours[i] + ' ' + this.cookies[i];
-//     }
-//     let total = document.createElement('li');
-//     total.textContent = 'total ' + this.totalx + ' cookies';
-//     ulElement.appendChild(total);
-
-//   }
-// }
-// Seattle.generateRandomNumber();
-// Seattle.render();
-
-// new constructor
 
 function City( name, maxCustomers, minCustomers, AvgCookie ) {
   this.maxCustomers = maxCustomers;
@@ -109,7 +67,7 @@ City.prototype.generateRandomNumber = function () {
     trDaily.textContent = 'Daily Location Total';
   };
 
-  //
+
   City.prototype.rowS = function () {
     const tr = document.createElement( 'tr' );
     table.appendChild( tr );
@@ -191,7 +149,7 @@ formElement.addEventListener( 'submit', function ( event ) {
 
   const newBranch = new City( cityName, maxCustomers, minCustomers, avgCookie );
 
-  table.deleteRow( table.rows.length -1 );
+  table.deleteRow( table.rows.length - 1 );
   newBranch.generateRandomNumber();
   newBranch.rowS();
   newBranch.footer();

@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+
+
+  <link rel="stylesheet" href="css/index.css">
 
   <title>Document</title>
 </head>
@@ -16,33 +19,37 @@
 <h1>Welcome To Pat's Salmon Cookies Shop</h1>
    <ul>
 
-     <a href="sales.html">Sales</a>
+     <a href="sales.html">Sales Page </a>
    </ul>
 
  </header>
   
 
   
-</body>
 <main>
-    <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/family.jpg?raw=true"width="300" height="200" alt="salmon">
-    <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/shirt.jpg?raw=true"width="300" height="200" alt="salmon">
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/family.jpg?raw=true" alt="salmon">
+    <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/shirt.jpg?raw=true" alt="salmon">
 
-  <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/chinook.jpg?raw=true" width="300" height="200"alt="salmon">
+  <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/chinook.jpg?raw=true" alt="salmon">
 
-  <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/cutter.jpeg?raw=true"width="300" height="200" alt="salmon">
-  <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/fish.jpg?raw=true" width="300" height="200"alt="salmon">
-  <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/frosted-cookie.jpg?raw=true" width="300" height="200"alt="salmon">
-  <img src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/salmon.png?raw=true"width="300" height="200" alt="salmon">
+  <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/cutter.jpeg?raw=true" alt="salmon">
+  <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/fish.jpg?raw=true" alt="salmon">
+  <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/frosted-cookie.jpg?raw=true" alt="salmon">
+  <img class="mySlides" src="https://github.com/waleedafifi90/amman-201d17/blob/main/class-08/lab-b/assets/salmon.png?raw=true" alt="salmon">
+</div>
+<h3>OUR BRANCHES</h3>
 
   <article>
+    <div id="seattle">
     <h2>Seattle</h2>
     <ul>
         <li>Hours Open: 6am-7pm</li>
         <li>Contact Info : 123-345-2222</li>
         <li>Location: 85 Pike St Room 500, Seattle, WA 98101</li>
     </ul>
-    <h2>Tokyo</h2>
+  </div>
+    <h2 >Tokyo</h2>
     <ul>
         <li>Hours Open: 6am-7pm</li>
         <li>Contact Info : 698-654-8952</li>
@@ -67,9 +74,26 @@
         <li>Location: Av. Elmer Faucett s/n, Callao 07031</li>
     </ul>
 </article>
-  <footer>
+  <footer class="footer">
     All Rights Reserved 2021&copy;
   </footer>
+  
+  <script>var slideIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }</script>
+    </body>
+
 </main>
 
 </html>
