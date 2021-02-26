@@ -1,0 +1,98 @@
+*{
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body{
+  margin: auto;
+  width: 960px;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family: 'Kaushan Script', cursive;
+  height: 70px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+padding-bottom: 20px;
+padding-top: 20px;
+border: 1px solid rgba(255, 255, 255, 0.952);
+
+border-radius: 50px;
+background-size: contain;
+color: salmon;
+
+
+}
+a{
+  font-size: 16px;
+  color: white;
+  padding: 10px 0;
+  
+
+
+}
+
+h3{
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+  padding: 10px;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+h2{
+  font-size: 30px;
+  font-family: 'Kaushan Script', cursive;
+  padding: 10px;
+  text-align: center;
+  padding-top: 20px;
+  background-color: salmon;
+margin-bottom: 10px;
+}
+#seattle{
+  margin-top: 10px;
+
+}
+img{
+  padding-top: 15px;
+
+}
+.mySlides{
+  padding: 30px;
+  padding-left: 90px;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 900px;
+  height: 450px;
+  margin-right: 20px;
+}
+.w3-content w3-section{
+  background-color: black;
+}
+footer{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: larger;
+  font-family:  serif;
+  width: 100%;
+}
+li{
+  font-size: larger;
+  font-style: italic;
+  font-family: Georgia;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
